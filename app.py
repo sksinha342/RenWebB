@@ -10,6 +10,9 @@ app.register_blueprint(login_bp)
 @app.route("/")
 def home():
     return "Backend Running"
+@app.route("/api/ping")
+def ping():
+    return {"status": "ok"}
 
 if __name__ == "__main__":
     app.run()    
